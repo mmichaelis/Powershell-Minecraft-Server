@@ -1,0 +1,34 @@
+{
+  "referenceUrls": [
+    "http://www.minecraftforum.net/forums/support/server-support/server-administration/1937726-java-7-8-command-line-options-for-minecraft"
+  ],
+  "options": {
+    "common": [
+      "-Xmn%java.memory.min%",
+      "-Xss%java.memory.max%",
+      "-Xms%java.memory.min%",
+      "-Xmx%java.memory.max%",
+      "-XX:+AggressiveOpts",
+      "-XX:+UseFastAccessorMethods",
+      "-XX:+OptimizeStringConcat",
+      "-XX:+UseBiasedLocking",
+      "-Xincgc",
+      "-XX:MaxGCPauseMillis=10",
+      "-XX:SoftRefLRUPolicyMSPerMB=10000",
+      "-XX:+CMSParallelRemarkEnabled",
+      "-XX:ParallelGCThreads=10",
+      "-Djava.net.preferIPv4Stack=true"
+    ],
+    "common-disabled": [
+      "comment: Raises JVM cannot use large page memory because it does not have enough privilege to lock pages in memory",
+      "-XX:+UseLargePages"
+    ],
+    "7": [
+      "-XX:+UseStringCache",
+      "-XX:PermSize=256M",
+      "-XX:+UseCompressedStrings"
+    ],
+    "8": [
+    ]
+  }
+}
