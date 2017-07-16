@@ -1,0 +1,81 @@
+{
+  "minecraft": {
+    "versions": {
+      "json": "https://launchermeta.mojang.com/mc/game/version_manifest.json"
+    },
+    "download": {
+      "baseUrl": "https://s3.amazonaws.com/Minecraft.Download/versions",
+      "url": null
+    },
+    "files": {
+      "properties": null,
+      "ops": null,
+      "eula": null,
+      "startProperties": null
+    },
+    "exec": {
+      "jar": {
+        "name": null,
+        "dir": null,
+        "fullPath": null
+      }
+    }
+  },
+  "forge": {
+    "versions": {
+      "json": "http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json"
+    },
+    "download": {
+      "baseUrl": "http://files.minecraftforge.net/maven/net/minecraftforge/forge",
+      "url": null
+    },
+    "install": {
+      "jar": {
+        "name": null,
+        "dir": null,
+        "fullPath": null
+      }
+    },
+    "exec": {
+      "jar": {
+        "name": null,
+        "dir": null,
+        "fullPath": null
+      }
+    }
+  },
+  "java": {
+    "referenceUrls": [
+      "http://www.minecraftforum.net/forums/support/server-support/server-administration/1937726-java-7-8-command-line-options-for-minecraft"
+    ],
+    "options": {
+      "common": [
+        "-Xmn%java.memory.min%",
+        "-Xss%java.memory.max%",
+        "-Xms%java.memory.min%",
+        "-Xmx%java.memory.max%",
+        "-XX:+AggressiveOpts",
+        "-XX:+UseFastAccessorMethods",
+        "-XX:+OptimizeStringConcat",
+        "-XX:+UseBiasedLocking",
+        "-Xincgc",
+        "-XX:MaxGCPauseMillis=10",
+        "-XX:SoftRefLRUPolicyMSPerMB=10000",
+        "-XX:+CMSParallelRemarkEnabled",
+        "-XX:ParallelGCThreads=10",
+        "-Djava.net.preferIPv4Stack=true"
+      ],
+      "common-disabled": [
+        "comment: Raises JVM cannot use large page memory because it does not have enough privilege to lock pages in memory",
+        "-XX:+UseLargePages"
+      ],
+      "7": [
+        "-XX:+UseStringCache",
+        "-XX:PermSize=256M",
+        "-XX:+UseCompressedStrings"
+      ],
+      "8": [
+      ]
+    }
+  }
+}
