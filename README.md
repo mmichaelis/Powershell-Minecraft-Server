@@ -15,6 +15,20 @@ Any configuration given in `default.properties` can be overridden in a custom pr
 * Support for Modpacks
 * More Server Types
 
+## Troubleshooting
+
+### I cannot reach my server from the Internet.
+
+Perhaps you need to enable port forwarding in your router.
+
+### I cannot execute the Powershell Scripts.
+
+You might need to adjust the security policy:
+
+```
+Set-ExecutionPolicy RemoteSigned
+```
+
 ## See Also
 
 * [itzg/minecraft-server - Docker Hub](https://hub.docker.com/r/itzg/minecraft-server/)
